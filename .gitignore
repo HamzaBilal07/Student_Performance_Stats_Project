@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.env
+.streamlit/secrets.toml
+reports/*.docx
+outputs/graphs/*.png
+outputs/graphs/*.jpg
+outputs/graphs/*.jpeg
+outputs/graphs/*.svg
