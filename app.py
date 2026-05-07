@@ -3,9 +3,14 @@ from __future__ import annotations
 import base64
 from datetime import datetime
 from pathlib import Path
+import sys
 
 import pandas as pd
 import streamlit as st
+
+PROJECT_ROOT = Path(__file__).resolve().parent
+if str(PROJECT_ROOT) not in sys.path:
+    sys.path.insert(0, str(PROJECT_ROOT))
 
 from src.data_loader import dataset_overview, load_default_dataset
 from src.distributions import (
@@ -45,7 +50,6 @@ from src.report_generator import generate_report
 from src.supplementary_r_syntax import R_SYNTAX_REFERENCES, get_r_syntax
 
 
-PROJECT_ROOT = Path(__file__).resolve().parent
 LOGO_PATH = PROJECT_ROOT / "assets" / "logo_placeholder.png"
 REPORTS_DIR = PROJECT_ROOT / "reports"
 PROJECT_TITLE = "Statistical Analysis and Prediction of Student Academic Performance Using Python"
